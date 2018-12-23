@@ -21,6 +21,9 @@ $message 	= $client->parseEvents()[0]['message'];
 $messageid 	= $client->parseEvents()[0]['message']['id'];
 
 $profil = $client->profil($userId);
+$profileName 	= $profil->displayName;
+$profileURL 	= $profil->pictureUrl;
+$profielStatus 	= $profil->statusMessage;
 
 $pesan_datang = explode(" ", $message['text']);
 $msg_type = $message['type'];
